@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS `movies` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `name` varchar(100) NOT NULL,  `cat_id` int(11) NOT NULL COMMENT '1 - wojenny, 2 - komedia, 3 - dramat, 4 - horror, 5 - Sci-Fi',  `actors` text NOT NULL,  `slug` varchar(255) NOT NULL,  `desc` text NOT NULL,  PRIMARY KEY (`id`)) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
