@@ -103,7 +103,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/zaliczenie/',
+	'base_url'   => '/~s175716/zaliczenie//',
     'index_file' => FALSE,
 ));
 
@@ -151,6 +151,14 @@ Route::set('logout', 'wyloguj')
         'controller' => 'welcome',
         'action'     => 'logout',
     ));
+
+Route::set('movie', 'movie(/<id>)')
+    ->defaults(array(
+        'controller' => 'movie',
+        'action'     => 'index',
+    ));
+
+
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(

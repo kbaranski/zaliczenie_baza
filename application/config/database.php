@@ -4,7 +4,7 @@ return array
 (
     'default' => array
     (
-        'type'       => 'MySQL',
+        'type'       => 'MySQLi',
         'connection' => array(
             /**
              * The following options are available for MySQL:
@@ -17,10 +17,10 @@ return array
              *
              * Ports and sockets may be appended to the hostname.
              */
-            'hostname'   => 'sql.rdl.pl',
-            'database'   => 'bobo168_opppw',
-            'username'   => 'bobo168_bartek',
-            'password'   => 'asdasd',
+            'hostname'   => '10.254.94.2',
+            'database'   => 's175716',
+            'username'   => 's175716',
+            'password'   => 'PDgTvPY5',
             'persistent' => FALSE,
         ),
         'table_prefix' => '',

@@ -5,11 +5,15 @@ class Controller_Welcome extends Controller_Template {
 	public function action_index()
     {
 
+        $is_login = Session::instance()->get('login');
+        if($is_login == 1) $this->redirect('index.php/movies');;
+
         if(isset($_POST['login']) and isset($_POST['pass'])) {
 
             if(ORM::factory('User')->login($_POST)) {
 
                 Session::instance()->set('login', 1);
+                $this->redirect('index.php/movies');
 
             } else {
                 $this->template->error = 'Podano błędne dane.';
