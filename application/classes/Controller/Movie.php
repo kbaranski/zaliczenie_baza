@@ -5,7 +5,8 @@ class Controller_Movie extends Controller_Template {
 	public function action_index()
     {
         $id = $this->request->param('id');
-
+        $is_login = Session::instance()->get('login');
+        if($is_login == 0) $this->redirect('');
 
 
         if(isset($_POST['opinion'])) {
