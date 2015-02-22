@@ -152,12 +152,6 @@ Route::set('logout', 'wyloguj')
         'action'     => 'logout',
     ));
 
-Route::set('rejestracja', 'rejestracja')
-    ->defaults(array(
-        'controller' => 'register',
-        'action'     => 'index',
-    ));
-
 Route::set('movie', 'movie(/<id>)')
     ->defaults(array(
         'controller' => 'movie',

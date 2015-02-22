@@ -5,7 +5,7 @@ class Controller_Movies extends Controller_Template {
 	public function action_index()
     {
         $is_login = Session::instance()->get('login');
-        if($is_login == 0) $this->redirect('');
+        if($is_login == 0) $this->redirect('index.php');
 
         $this->template->movies = ORM::Factory('Movie')->find_all();
         $this->template->movies_popular = ORM::Factory('Movie')->get_popular();

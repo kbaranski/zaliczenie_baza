@@ -24,8 +24,6 @@
             <input type="submit" value="Zaloguj" />
 
         </form>
-<br/><br/>
-        <a href="index.php/rejestracja">Rejestracja</a>
     <?php
     }
     ?>
